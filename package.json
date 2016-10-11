@@ -29,6 +29,7 @@
     "eslint-plugin-react": "^6.4.1",
     "html-webpack-plugin": "^2.22.0",
     "webpack": "^1.13.2",
-    "webpack-merge": "^0.14.1"
+    "webpack-merge": "^0.14.1",
+    "webpack-validator": "^2.2.9"
   }
 }

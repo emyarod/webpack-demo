@@ -1,6 +1,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import merge from 'webpack-merge';
+import validate from 'webpack-validator';
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
@@ -36,4 +37,4 @@ switch (process.env.npm_lifecycle_event) {
     config = merge(common, {});
 }
 
-module.exports = config;
+module.exports = validate(config);
