@@ -19,6 +19,15 @@ const common = {
     path: PATHS.build,
     filename: '[name].js',
   },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Webpack demo',
