@@ -1,3 +1,7 @@
 body {
   background: cornsilk;
 }
+
+:local .pinkbg {
+  background: #f79a9a;
+}
