@@ -1,12 +1,13 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import merge from 'webpack-merge';
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build'),
 };
 
-module.exports = {
+const common = {
   // Entry accepts a path or an object of entries.
   // We'll be using the latter form given it's
   // convenient with more complex configurations.
@@ -23,3 +24,16 @@ module.exports = {
     }),
   ],
 };
+
+let config;
+
+// Detect how npm is run and branch based on that
+switch (process.env.npm_lifecycle_event) {
+  case 'build':
+    config = merge(common, {});
+    break;
+  default:
+    config = merge(common, {});
+}
+
+module.exports = config;
