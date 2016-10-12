@@ -45,3 +45,13 @@ exports.setupCSS = paths => ({
     ],
   },
 });
+
+exports.minify = () => ({
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
+  ],
+});
