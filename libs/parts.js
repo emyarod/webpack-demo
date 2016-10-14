@@ -68,7 +68,7 @@ exports.setFreeVariable = (key, value) => {
   };
 };
 
-exports.extractBundle = options => {
+exports.extractBundle = (options) => {
   const entry = {};
   entry[options.name] = options.entries;
 
