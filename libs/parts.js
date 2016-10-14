@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 exports.devServer = options => ({
   devServer: {
@@ -83,3 +84,13 @@ exports.extractBundle = options => {
     ],
   };
 };
+
+exports.clean = path => ({
+  plugins: [
+    new CleanWebpackPlugin([path], {
+      // Without `root` CleanWebpackPlugin won't point to our
+      // project and will fail to work.
+      root: process.cwd(),
+    }),
+  ],
+});
