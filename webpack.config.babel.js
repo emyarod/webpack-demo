@@ -45,6 +45,12 @@ switch (process.env.npm_lifecycle_event) {
       common,
       {
         devtool: 'source-map',
+        output: {
+          path: PATHS.build,
+          filename: '[name].[chunkhash].js',
+          // This is used for require.ensure. The setup
+          // will work without but this is useful to set
+        },
       },
       parts.setFreeVariable(
         'process.env.NODE_ENV',
