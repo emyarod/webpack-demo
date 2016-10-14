@@ -32,6 +32,7 @@
     "eslint-plugin-react": "^6.4.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
+    "purifycss-webpack-plugin": "^2.0.3",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2",
@@ -39,6 +40,7 @@
     "webpack-validator": "^2.2.9"
   },
   "dependencies": {
+    "purecss": "^0.6.0",
     "react": "^15.3.2"
   }
 }
