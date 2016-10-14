@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 exports.devServer = options => ({
   devServer: {
@@ -92,5 +93,22 @@ exports.clean = path => ({
       // project and will fail to work.
       root: process.cwd(),
     }),
+  ],
+});
+
+exports.extractCSS = paths => ({
+  module: {
+    loaders: [
+      // Extract CSS during build
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style', 'css'),
+        include: paths,
+      },
+    ],
+  },
+  plugins: [
+    // Output extracted CSS to a file
+    new ExtractTextPlugin('[name].[chunkhash].css'),
   ],
 });
