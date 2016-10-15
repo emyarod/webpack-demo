@@ -1,0 +1,2 @@
+webpackJsonp([0,3],{0:function(e,t,n){"use strict";function u(e){return e&&e.__esModule?e:{"default":e}}n(1);var r=n(30),o=u(r);document.body.appendChild((0,o["default"])())},30:function(e,t,n){"use strict";function u(e){return e&&e.__esModule?e:{"default":e}}var r=n(31);u(r);e.exports=function(){var e=document.createElement("h1");return e.className="pure-button",e.innerHTML="Hello world",e}}});
+//# sourceMappingURL=app.cb6a302ecbff06004fea.js.map
